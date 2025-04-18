@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - CampusConnect</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="" alt="CampusConnect Logo">
+                <span class="logo-text">CampusConnect</span>
+            </a>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="timetable.html">Timetables</a>
+                <a href="mess.html">Mess Updates</a>
+                <a href="events.html">Events</a>
+                <a href="faculty.html">Faculty</a>
+                <a href="therapybot.html">TherapyBot</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Campus Feedback</h1>
+            <p>Help us improve your campus experience</p>
+        </div>
+    </section>
+
+    <!-- Feedback Overview -->
+    <section class="feedback-overview">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="overview-icon">📝</div>
+                    <h3>Submit Feedback</h3>
+                    <p>Share your suggestions, concerns, or appreciation for any aspect of campus life.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">📊</div>
+                    <h3>Track Status</h3>
+                    <p>Monitor the progress of your submitted feedback and see how it's being addressed.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">🔄</div>
+                    <h3>See Updates</h3>
+                    <p>Receive notifications when actions are taken based on student feedback.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">👥</div>
+                    <h3>Community Impact</h3>
+                    <p>View improvements made across campus based on collective student input.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Form -->
+    <section class="feedback-form-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Submit Your Feedback</h2>
+                <p>We value your input to enhance campus services and facilities</p>
+            </div>
+            <div class="feedback-container">
+                <form class="feedback-form" id="feedbackForm">
+                    <div class="form-group">
+                        <label for="feedbackType">Feedback Category*</label>
+                        <select id="feedbackType" required>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="academic">Academic Programs</option>
+                            <option value="facilities">Campus Facilities</option>
+                            <option value="mess">Mess & Dining Services</option>
+                            <option value="hostel">Hostel Accommodation</option>
+                            <option value="events">Campus Events</option>
+                            <option value="sports">Sports & Recreation</option>
+                            <option value="faculty">Faculty & Staff</option>
+                            <option value="application">CampusConnect App</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackSubject">Subject*</label>
+                        <input type="text" id="feedbackSubject" placeholder="Brief title for your feedback" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackDescription">Description*</label>
+                        <textarea id="feedbackDescription" rows="5" placeholder="Please provide detailed information about your feedback..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackSuggestion">Suggestion for Improvement</label>
+                        <textarea id="feedbackSuggestion" rows="3" placeholder="If applicable, suggest how we could improve..."></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="urgencyLevel">Urgency Level</label>
+                            <select id="urgencyLevel">
+                                <option value="low">Low</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="high">High</option>
+                                <option value="critical">Critical</option>
+                            </select>
+                        </div>
+                        <div class="form-group half">
+                            <label for="feedbackLocation">Location</label>
+                            <input type="text" id="feedbackLocation" placeholder="Specific location (if applicable)">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Attach Images (optional)</label>
+                        <div class="file-upload">
+                            <input type="file" id="feedbackImages" multiple accept="image/*">
+                            <label for="feedbackImages" class="file-label">Choose Files</label>
+                            <span class="file-info">No files selected</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="anonymousFeedback">
+                            <span class="checkmark"></span>
+                            Submit anonymously (your identity will not be shared)
+                        </label>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Status -->
+    <section class="feedback-status">
+        <div class="container">
+            <div class="section-title">
+                <h2>Track Your Feedback</h2>
+                <p>Enter your feedback ID to check the current status</p>
+            </div>
+            <div class="status-container">
+                <div class="status-form">
+                    <input type="text" placeholder="Enter Feedback ID" class="status-input">
+                    <button class="btn btn-primary">Check Status</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Improvements -->
+    <section class="recent-improvements">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recent Improvements</h2>
+                <p>Changes implemented based on student feedback</p>
+            </div>
+            <div class="improvements-grid">
+                <div class="improvement-card">
+                    <div class="improvement-icon">⏱️</div>
+                    <h3>Extended Library Hours</h3>
+                    <p>Based on student feedback, library hours have been extended until midnight during exam weeks.</p>
+                    <div class="improvement-meta">
+                        <span class="improvement-date">Implemented: Feb 10, 2025</span>
+                    </div>
+                </div>
+                <div class="improvement-card">
+                    <div class="improvement-icon">🥗</div>
+                    <h3>New Healthy Menu Options</h3>
+                    <p>Introduced more vegetarian and health-conscious meal options in the campus mess.</p>
+                    <div class="improvement-meta">
+                        <span class="improvement-date">Implemented: Jan 25, 2025</span>
+                    </div>
+                </div>
+                <div class="improvement-card">
+                    <div class="improvement-icon">🔌</div>
+                    <h3>More Power Outlets</h3>
+                    <p>Added 150+ charging stations across campus study areas and common rooms.</p>
+                    <div class="improvement-meta">
+                        <span class="improvement-date">Implemented: Jan 15, 2025</span>
+                    </div>
+                </div>
+                <div class="improvement-card">
+                    <div class="improvement-icon">🚿</div>
+                    <h3>Hostel Shower Upgrades</h3>
+                    <p>Replaced old showers with new energy-efficient models in all hostels.</p>
+                    <div class="improvement-meta">
+                        <span class="improvement-date">Implemented: Dec 20, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Statistics -->
+    <section class="feedback-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1,435</div>
+                    <div class="stat-label">Feedbacks Received</div>
+                    <div class="stat-period">Last 6 Months</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">87%</div>
+                    <div class="stat-label">Resolution Rate</div>
+                    <div class="stat-period">Average Response Time: 7 Days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">42</div>
+                    <div class="stat-label">Campus Improvements</div>
+                    <div class="stat-period">Implemented This Year</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">93%</div>
+                    <div class="stat-label">Student Satisfaction</div>
+                    <div class="stat-period">With Feedback System</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback FAQ -->
+    <section class="feedback-faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about our feedback system</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How is my feedback processed?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All feedback is reviewed by the relevant department within 48 hours. Critical issues are escalated to department heads immediately. You will receive updates on the status of your feedback through email notifications.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I submit anonymous feedback?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can choose to submit feedback anonymously by checking the "Submit anonymously" option in the feedback form. Please note that while your identity will be protected, providing contact information can help us follow up on your feedback if needed.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does it take to address feedback?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The timeline varies depending on the nature of the feedback. Simple issues may be resolved within days, while more complex matters might take several weeks. The current average resolution time is 7 days, and you can track the status of your feedback using your feedback ID.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What happens if my feedback requires budget allocation?
+                        <span class
